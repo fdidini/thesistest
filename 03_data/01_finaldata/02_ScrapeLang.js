@@ -1,3 +1,8 @@
+var qT = require('./03_ScrapeTopics.js');
+
+qT.test2();
+
+
 var qL = function queryLanguages(array_parsed, file){
   var fs = require('fs');
   var request = require('request');
@@ -29,12 +34,8 @@ var qL = function queryLanguages(array_parsed, file){
     });
     setTimeout(callback, 2000);
     }, function() {
-      fs.writeFile(file, JSON.stringify(reposCompleted), function (err) {
-        if (err) {
-          console.error('error');
-        }
-      }
-    );
+      console.log(reposCompleted);
+      qT.qT(reposCompleted, file);
   });
 
   

@@ -1,11 +1,13 @@
 var fs = require('fs');
 var request = require('request');
 var async = require('async');
-var ql = require('./ScrapeLang.js');
+var ql = require('./02_ScrapeLang.js');
 
 ql.test();
 
-var indPaginas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+var nO = 1;
+
+var indPaginas = [nO];
 
 var repoCollection = [];
 
@@ -28,7 +30,7 @@ async.eachSeries(indPaginas, function(value, callback) {
     var resultado = JSON.parse(body);
     console.log(apiRequest);
     var arrayItems = resultado.items;
-
+    console.log(arrayItems);
     arrayItems.forEach(function(element) {
 
       var individualRepo = new Object;
@@ -57,5 +59,5 @@ async.eachSeries(indPaginas, function(value, callback) {
   }, function() {
     var select500 = repoCollection.slice(0, 500);
     console.log(select500);
-    ql.qL(select500, 'completeForks.json');
+    ql.qL(select500, 'SeparatePages/completeFork' + nO + '.json');
 });
