@@ -126,10 +126,10 @@ function DataDictionary (selectdata, selectarray, dict, wc, selectdiv, side) {
     }
 }
 
-
 DataDictionary('data/cs_test.txt', rawdata, dictionary1, wordCount, '#viz1', 'flex-end');
 
 DataDictionary('data/languages.txt', rawdata2, dictionary2, wordCount2, '#viz2', 'flex-start');
+
 
 // var g = d3.select('#viz2')
 // .append('svg')
