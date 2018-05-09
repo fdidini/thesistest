@@ -59,5 +59,5 @@ async.eachSeries(indPaginas, function(value, callback) {
   }, function() {
     var select500 = repoCollection.slice(0, 500);
     console.log(select500);
-    ql.qL(select500, 'SeparatePages/completeFork' + nO + '.json');
+    ql.qL(select500, 'SeparatePages/test' + nO + '.json');
 });

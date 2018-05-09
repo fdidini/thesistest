@@ -1,5 +1,5 @@
 var chart = d3.parsets()
-    .dimensions(["Survived", "Sex", "Age", "Class"]);
+    .dimensions([comp, security, 'internet']);
 
 var vis = d3.select("#vis").append("svg")
     .attr("width", chart.width())

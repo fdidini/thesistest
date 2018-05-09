@@ -115,13 +115,13 @@
         text-transform: uppercase;
         color: black
     }
-    .strong1{
+    .strong1 {
       background-color: rgb(249, 162, 96);  
     }
-    .strong2{
+    .strong2 {
       background-color: rgb(110, 204, 222);  
     }
-    h5{
+    h5 {
         font-size: 15px;
         line-height: 18px;
         text-align: center;
@@ -131,6 +131,11 @@
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
-    .img{
+    .img {
         max-width: 50%
+    }
+    .tracer {
+        position: absolute;
+        border-top: 1px dashed black;
+        border-left: 1px dashed black;
     }

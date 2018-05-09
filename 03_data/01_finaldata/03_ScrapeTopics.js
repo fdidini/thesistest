@@ -10,23 +10,25 @@ var qT = function queryTopics(array_parsed, file){
 
   async.eachSeries(array_parsed, function(value, callback) {
 
-      var finalObj = value;
-      var topicsCompleted = [];
-      var topicsArray = value.topics;
+      // var finalObj = value;
+      // var topicsCompleted = [];
+      // var topicsArray = value.topics;
       
-      qD.qD(topicsArray, topicsCompleted);
-      finalObj.dictionary = topicsCompleted;
-      allCompleted.push(finalObj);
+      // qD.qD(topicsArray, topicsCompleted);
+      // finalObj.dictionary = topicsCompleted;
+      allCompleted.push(value);
+      console.log(value);
       
 
       setTimeout(callback, 2000);
     },
     function() {
+        // fs.writeFile(file, allCompleted, function(err) {
       fs.writeFile(file, JSON.stringify(allCompleted), function(err) {
         if (err) {
           console.error('error');
         }
-        else { console.log('done!') }
+        else { console.log(JSON.stringify(allCompleted)) }
       });
     }
   );
