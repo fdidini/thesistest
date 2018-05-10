@@ -522,8 +522,8 @@ d3.select('.btnholder')
   .attr('class','btn-btn')
   .text('change status')
   .on('click', function(){
-      document.getElementById('viz2').innerHTML = "";
-      DataDictionary('data/completeFork1.json', rawdata2, dictionary2, wordCount2, '#viz2', 'flex-end');
+      document.getElementById('viz1').innerHTML = "";
+      DataDictionary('data/completeFork1.json', rawdata, dictionary1, wordCount, '#viz1', 'flex-end');
   })
   ;
 
