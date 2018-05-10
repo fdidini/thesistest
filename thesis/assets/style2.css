@@ -29,15 +29,15 @@
         align-self: stretch;
         justify-content: center;
     }
-    #viz1{
+    #viz1,#viz3{
         background-color: rgb(249, 162, 96);
         /*align-items: flex-end;*/
     }
-    #viz2{
+    #viz2,#viz4{
         background-color: rgb(110, 204, 222);
         /*align-items: flex-start;*/
     }
-    #viz1,#viz2 {
+    #viz1,#viz2,#viz3,#viz4 {
         display: flex; 
         width: 50%;
         height: auto;

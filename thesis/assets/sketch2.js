@@ -530,6 +530,8 @@ d3.select('.btnholder')
 // DataDictionary2('data/cs_test.txt', rawdata, dictionary1, wordCount, '#viz1', 'flex-start');
 DataDictionary('data/completeStars.json', rawdata, dictionary1, wordCount, '#viz1', 'flex-start');
 DataDictionary('data/completeFork1.json', rawdata2, dictionary2, wordCount2, '#viz2', 'flex-end');
+DataDictionary('data/completeStars.json', rawdata3, dictionary3, wordCount3, '#viz3', 'flex-start');
+DataDictionary('data/completeFork1.json', rawdata4, dictionary4, wordCount4, '#viz4', 'flex-end');
 
 
 
