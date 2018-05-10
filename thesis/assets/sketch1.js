@@ -91,7 +91,7 @@ function DataDictionary (selectdata, selectarray, dict, wc, selectdiv, side) {
     
     }
         
-    function analyze(data) {
+    function analyze2(data) {
     
       data.forEach(function(phrases){
         // console.log(phrases);
