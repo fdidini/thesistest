@@ -59,8 +59,8 @@ function DataDictionary2(selectdata, selectarray, dict, wc, selectdiv, side) {
             
     });
 
-    function handleMouseOver(d, i) {
-        console.log(this.id + ' appears ' + d.frequency + ' over the document');
+    function handleMouseOver(data, i) {
+        console.log(this.id + ' appears ' + data.topics + ' over the document');
         var ourdiv = d3.selectAll('#' + this.id);
         console.log(ourdiv._groups["0"].length);
         callBox(d, 2, ourdiv);
@@ -310,8 +310,8 @@ function DataDictionary(selectdata, selectarray, dict, wc, selectdiv, side) {
             
     });
 
-    function handleMouseOver(d, i) {
-        console.log(this.id + ' appears ' + d.frequency + ' over the document');
+    function handleMouseOver(data, i) {
+        console.log(this.id + ' appears ' + data.topics + ' over the document');
         var ourdiv = d3.selectAll('#' + this.id);
         console.log(ourdiv._groups["0"].length);
         callBox(d, 2, ourdiv);
