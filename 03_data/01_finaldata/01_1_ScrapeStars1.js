@@ -1,7 +1,7 @@
 var fs = require('fs');
 var request = require('request');
 var async = require('async');
-var ql = require('./ScrapeLang.js');
+var ql = require('./02_ScrapeLang.js');
 
 ql.test();
 
