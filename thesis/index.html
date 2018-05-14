@@ -2,12 +2,12 @@
 <html>
   <head>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="d3.min.js"></script>
+    <script src="assets/d3.parsets.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.0/underscore.js"></script>
     <title>Computational Learning vs Computational Reality</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:400,400i,700,700i|IBM+Plex+Serif:200,200i,400,400i,700,700i" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|IBM+Plex+Sans+Condensed:400,400i,700,700i|IBM+Plex+Serif:200,200i,400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
 
     </head>
 
@@ -41,7 +41,17 @@
                 <div id='viz1'></div>
                 <div id='viz2'></div><br>
             </div>
-                <div id='base1' class='bases'>hey</div>
+                <div id='base1' class='bases'>
+                    <div class='textrow'>
+                        <div class='lefttxt'></div>
+                        <div class='centertxt'></div>
+                        <div class='righttxt'></div>
+                    </div>
+                    <div class='graphrow'>
+                        <div class='leftgraph'></div>
+                        <div class='rightgraph'></div>
+                    </div>
+                </div>
             <div class='intro_context'>
                 <!--<p>We see there&#39;s not much similarity. That can be partially explained by the fact tagging is driven by a need of creating indexes around specific content. This concept, derived from information science and library science, is crucial to creating hubs of discovery and knowledge. And when users of a digital network define those tags, it&#39;s been dubbed as folksonomy: the action of creating indexes done in a crowdsourced way.</p>-->
                 <!--<p>So the data hasn&#39;t a clearer picture. A way to circumvent this is to pull all of the descriptions for each tag. Github provides us with this in their API.</p>-->
@@ -74,7 +84,7 @@
             </div>
             <div class='vizcontainer'>
                 <div id='viz5'>
-                    <img class='img' src='assets/parallel_sets.jpg'>
+                    
                 </div>
             </div>
             <div class='intro_context'>
@@ -123,7 +133,8 @@
             </div>
         </div>
         
-        <script src="assets/sketch2.js"></script>
+        <script src="assets/01WordViz.js"></script>
+        <script src="assets/02ParSet.js"></script>
 
     </body>
 </html>

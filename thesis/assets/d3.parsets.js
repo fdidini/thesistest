@@ -372,6 +372,12 @@
       return parsets;
     };
 
+    function d3_functor(v) {
+      return typeof v === "function" ? v : function() { return v; };
+    }
+    
+    d3.functor = d3_functor;
+
     parsets.value = function(_) {
       if (!arguments.length) return value_;
       value_ = d3.functor(_);
@@ -420,12 +426,27 @@
       return parsets;
     };
 
+    function rebind(target, source) {
+      var i = 1,
+        n = arguments.length,
+        method;
+      while (++i < n) target[method = arguments[i]] = d3_rebind(target, source, source[method]);
+      return target;
+    };
+
+    function d3_rebind(target, source, method) {
+      return function() {
+        var value = method.apply(source, arguments);
+        return value === source ? target : value;
+      };
+    }
+
     var body = d3.select("body");
     var tooltip = body.append("div")
         .style("display", "none")
         .attr("class", "parsets tooltip");
 
-    return d3.rebind(parsets, event, "on").value(1).width(960).height(600);
+    return rebind(parsets, event, "on").value(1).width(960).height(600);
 
     function dimensionFormatName(d, i) {
       return dimensionFormat.call(this, d.name, i);
