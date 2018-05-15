@@ -9,6 +9,17 @@
         background: linear-gradient(to bottom right, aquamarine, aqua);
         }
 	
+        .center {
+        display: table;
+        width: 100%;
+        }
+
+        .center-text {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        }
+	
 	#canvas {
         padding: 0px 0px 0px 0px;
         background: black;
@@ -79,7 +90,9 @@
 	
 	<body>
 	<canvas id="canvas"> Canvas not supported </canvas>
-	<h1> Computational Learning <br> vs Computational Reality </h1> <br>
+	<div class="center">
+ 	<div class="center-text">
+ 	<h1> Computational Learning <br> vs Computational Reality </h1> <br>
 	<h2> The relationship between <bold> computer-science education </bold> <br> and <bold>computational trends in Github </bold> </h2>
 	<br>
 	<br>
@@ -90,6 +103,8 @@
 	<br>
 	<br>
 	<div style='button'> <a href="graphics.html">Enter</a> </div>
+	</div>
+	</div>	
 
 	</body>
 </html>
