@@ -1,41 +1,87 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Computational Learning vs Computational Reality</title>
+    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="d3.min.js"></script>
     <script src="assets/d3.parsets.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.0/underscore.js"></script>
-    <title>Computational Learning vs Computational Reality</title>
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|IBM+Plex+Sans+Condensed:400,400i,700,700i|IBM+Plex+Serif:200,200i,400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
+  </head>
+  
+  <style>
+     body {
+     background-color: #4448ff;
+	   padding: 160px 0px 0px 100px;
+     }
+		
+     h1 {
+     font-family: 'IBM Plex Serif';
+     font-weight: 700;
+     line-height: 95%;
+     padding: 0;
+     margin: 0;
+     color: white;
+     font-size: 72px;
+     }
+	
+     h2 {
+     font-family: 'IBM Plex Serif';
+     font-weight: 400;
+     padding: 0;
+     margin: 0;
+     color: white;
+     font-size: 28px;
+     }
+		
+     h3 {
+     font-family: 'IBM Plex Sans Condensed';
+     font-weight: 400;
+     padding: 0;
+     margin: 0;
+     color: white;
+     text-transform: uppercase;
+     font-size: 22px;
+     }
+		
+     a:link {
+     font-family: 'IBM Plex Sans Condensed';
+     font-size: 16px;
+     font-weight: 700;
+     font-color: #0;
+     text-decoration: none;
+     background-color: white;
+     padding: 10px 30px 10px 30px;
+     }
 
-    </head>
+     a:hover {
+     font-family: 'IBM Plex Sans Condensed';
+     font-size: 16px;
+     font-weight: 700;
+     font-color: gray;
+     text-decoration: none;
+     background-color: white;
+     padding: 10px 30px 10px 30px;
+     }
+		
+     a:active {
+     font-family: 'IBM Plex Sans Condensed';
+     font-size: 16px;
+     font-weight: 700;
+     font-color: #0;
+     text-decoration: none;
+     background-color: white;
+     padding: 10px 30px 10px 30px;
+     }
+  </style>
 
+  <h1> Computational Learning <br> vs Computational Reality </h1> <br>
+  
+  
     <body>
-        <div id='main-content'>
-            <div class='intro_context'>
-                <div class='hed'>
-                    <div class='hedparts'>Computational<br>Learning</div>
-                    <div id='vs'>VS</div>
-                    <div class='hedparts'>Computational<br>Reality</div>
-                </div>
-                <div class='bigtitleopener'>
-                    The relationship between <span style='color:rgb(249, 162, 96)'>computer-science education</span> and <span style='color:rgb(110, 204, 222)'>computational trends in Github</span>
-                </div>
-                <div class='textual'>
-                    <h3>Motivations and purpose</h3>
-                    <p>Teaching children how to code is a common goal in education in the US. Initiatives by the public and private sectors – such as code.org and CSforAll – are trying to address this with extensive funding and recommendations for courses and syllabi.</p>
-                    <p>But the long-term objectives of such initiatives are not clear. Will they create better citzens and more informed students? Or are they focused on a more productive workforce? These different agendas need to be aligned with concrete paths for the children and also juxtaposed with their professional and lived experience.</p>
-                    <p>Based on CSTA K 12 Computer Science Standards, and Github repositories as proxies for applied computer science, this visualization shows gaps and opportunities on both sides.</p>
-                    
-                    
-                    <h5 id="toc_4"><span class='step'>STEP 1:</span><br>What are the most common words on the K12 Standard vs the most common topics on Github?</h5>
-                    
-                    <!--<p><em>Repository data is grouped by user-based interaction (the top 500  starred and forked repositories)</em></p>-->
-
-                </div>
-            </div>
-
            <div class='btnholder'></div>
             <div class='vizcontainer'>
                 <div id='viz1'></div>
@@ -52,35 +98,9 @@
                         <div class='rightgraph'></div>
                     </div>
                 </div>
-            <div class='intro_context'>
-                <!--<p>We see there&#39;s not much similarity. That can be partially explained by the fact tagging is driven by a need of creating indexes around specific content. This concept, derived from information science and library science, is crucial to creating hubs of discovery and knowledge. And when users of a digital network define those tags, it&#39;s been dubbed as folksonomy: the action of creating indexes done in a crowdsourced way.</p>-->
-                <!--<p>So the data hasn&#39;t a clearer picture. A way to circumvent this is to pull all of the descriptions for each tag. Github provides us with this in their API.</p>-->
-                <!--<h5 id="toc_4"><span class='step'>STEP 1:</span><br>What are the most common words on the K12 Standard vs the most common topics on Github?</h5>-->
-                <h5 id="toc_0"><span class='step'>STEP 2:</span><br>What are the most common terms on the K12 Standard vs the description of the most common topics on Github</h5>
-                <p><em>Repository data is grouped by user-based interaction (the top 500  starred and forked repositories)</em></p>
-            </div>
             <div class='vizcontainer'>
                 <div id='viz3'></div>
                 <div id='viz4'></div>
-            </div>
-            <div id='base1' class='bases'>hey</div>
-            <div class='intro_context'>
-                <p>The relations are stronger and more understandable. To bind those two ideas together, we can now bind the Github topics to 5 categorical hubs in the K12 standard:</p>
-                <ol>
-                <li>Computing Systems</li>
-                <li>Networks and the Internet</li>
-                <li>Data and Analysis</li>
-                <li>Algorithms and Programming</li>
-                <li>Impacts of Computing</li>
-                </ol>
-                <p>Using a <strong>parallel set technique, the path is clear:</strong> </p>
-                <ol>
-                <li>Pick one of the 5 categories</li>
-                <li>See the topics related</li>
-                <li>See the repositories related</li>
-                </ol>
-                <h5 id="toc_1">Repositories and topics relation with K12 categories</h5>
-                <p><em>From top-to-bottom: K12 concepts, Github topics and Github top 500 repositories (by forking or starring)</em></p>
             </div>
             <div class='vizcontainer'>
                 <div id='viz5'>
