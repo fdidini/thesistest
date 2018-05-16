@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Computational Learning vs Computational Reality</title>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="d3.min.js"></script>
+    <script src="assets/d3.parsets.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.0/underscore.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|IBM+Plex+Sans+Condensed:400,400i,700,700i|IBM+Plex+Serif:200,200i,400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  
+  <style>
+     body {
+     background-color: #ececec;
+     padding: 30px 100px 1000px 60px;
+     }
+	
+		
+     h1 {
+     font-family: 'IBM Plex Serif';
+     font-weight: 700;
+     line-height: 105%;
+     color: black;
+     font-size: 24px;
+     }
+	
+     h2 {
+     font-family: 'IBM Plex Serif';
+     font-weight: 400;
+     color: black;
+     font-size: 30px;
+     }
+		
+     .link-style {
+     font-family: 'Open Sans';
+     font-weight: 400;
+     color: black;
+     text-transform: uppercase;
+     font-size: 10px;
+     letter-spacing: 5px;
+     }
+	  
+    a:link, a:visited {
+    background-color: white;
+    color: black;
+    padding: 8px 24px;
+    text-align: center; 
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    }
+
+    a:hover, a:active {
+    background-color: lightgray;
+    }
+	  
+
+	  
+  </style>
+	
+  <body>
+  	<h1> Computational Learning vs Computational Reality </h1> 
+	<div class='link-style'><a href="about.html">about</a>    <a href="dataviz1.html">DataViz #1</a>   <a href="dataviz2.html">DataViz #2</a>   <a href="dataviz3.html">DataViz #3</a> </div>
+	<br> 
+	<br>
+	<br>
+	<h2> What are the most common terms on the K12 Standard <br> vs the description of the most common topics on Github </h2> 
+   
+	<div class='btnholder'></div>
+     
+     <div class='vizcontainer'>
+     	<div id='viz1'></div>
+    	<div id='viz2'></div><br>
+     </div>
+    
+     <div id='base1' class='bases'>
+   	<div class='textrow'>
+   		<div class='lefttxt'></div>
+    		<div class='centertxt'></div>
+     		<div class='righttxt'></div>
+     	</div>
+	
+     	<div class='graphrow'>
+    		<div class='leftgraph'></div>
+     		<div class='rightgraph'></div>
+    	 </div>
+     </div>
+	
+        <script src="assets/01WordViz.js"></script>
+        <script src="assets/02ParSet.js"></script>
+
+    </body>
+</html>
